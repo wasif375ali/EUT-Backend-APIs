@@ -1,0 +1,593 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Shared", "EUT.Shared", "{B2572D01-EC08-4A40-AE8C-0CBC1E12207B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Application", "EUT.Application", "{96D6CC66-005B-40E5-8D31-DCE93BFBD49C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Domain", "EUT.Domain", "{DD941998-758E-45D4-BCC6-D4A84219C6F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.ExternalLibraries", "EUT.ExternalLibraries", "{99BE73DC-9575-474E-9307-E15CADCD7D04}"
+	ProjectSection(SolutionItems) = preProject
+		EUT.ExternalLibraries\Oracle.DataAccess.dll = EUT.ExternalLibraries\Oracle.DataAccess.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Presentation", "EUT.Presentation", "{C196241B-43F4-46D7-A350-1F5986EC713B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Repository", "EUT.Repository", "{D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Services", "EUT.Services", "{F3996F4F-FDA8-4B22-A9AF-AED9D3EC8A1F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.ServicesClient", "EUT.ServicesClient", "{88ED103C-00DB-41D5-A43B-13B6150861AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Tests", "EUT.Tests", "{821D4427-0ED5-454B-B83C-B74836449130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Services.API", "EUT.Services.API\EUT.Services.API.csproj", "{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B38B9D19-47DD-48F1-944C-A27A0900886C} = {B38B9D19-47DD-48F1-944C-A27A0900886C}
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83} = {B6EA9A1A-2750-4259-9EE7-404E3D06AC83}
+		{B675F721-0C6F-4DAF-8745-2754D99F0681} = {B675F721-0C6F-4DAF-8745-2754D99F0681}
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97} = {4CE4CA4B-4856-4097-8467-646EACFB5B97}
+		{886E2253-0554-4830-9D12-337D38EB4482} = {886E2253-0554-4830-9D12-337D38EB4482}
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62} = {9B196558-8601-4EF9-B01D-BEE0B6888C62}
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF} = {0443356A-DDC2-4CFF-B5D5-0957057280FF}
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D} = {E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D} = {C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}
+		{1343A79D-0035-47A7-96E8-42208EA03C56} = {1343A79D-0035-47A7-96E8-42208EA03C56}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Common", "EUT.Application.Common\EUT.Application.Common.csproj", "{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Base", "EUT.Domain.Base\EUT.Domain.Base.csproj", "{8A85E49B-07DA-466B-9FA3-6FDCBB07019A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Administration", "EUT.Domain.Administration\EUT.Domain.Administration.csproj", "{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Common", "EUT.Domain.Common\EUT.Domain.Common.csproj", "{3193FF28-674F-49E4-9FD6-FADFE757F0E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Facility", "EUT.Domain.Facility\EUT.Domain.Facility.csproj", "{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Permission", "EUT.Domain.Permission\EUT.Domain.Permission.csproj", "{0443356A-DDC2-4CFF-B5D5-0957057280FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Quote", "EUT.Domain.Quote\EUT.Domain.Quote.csproj", "{B38B9D19-47DD-48F1-944C-A27A0900886C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.RepairOrder", "EUT.Domain.RepairOrder\EUT.Domain.RepairOrder.csproj", "{13AFE6B5-FC64-4071-941A-E94D16235D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.UserManagement", "EUT.Domain.UserManagement\EUT.Domain.UserManagement.csproj", "{1FCFD04A-371D-414F-B849-2AE2BA403FFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.RTMI", "EUT.Domain.RTMI\EUT.Domain.RTMI.csproj", "{6377FDEE-F66C-4488-97B7-2EDD9ED076E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.UserManagement", "EUT.Repository.UserManagement\EUT.Repository.UserManagement.csproj", "{B6EA9A1A-2750-4259-9EE7-404E3D06AC83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.Base", "EUT.Repository.Base\EUT.Repository.Base.csproj", "{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Shared", "EUT.Shared\EUT.Shared.csproj", "{4CE4CA4B-4856-4097-8467-646EACFB5B97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.FieldOrder", "EUT.Application.FieldOrder\EUT.Application.FieldOrder.csproj", "{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Inventory", "EUT.Application.Inventory\EUT.Application.Inventory.csproj", "{162A1CB9-6C04-4947-9AD6-8F51C3A928E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Administration", "EUT.Application.Administration\EUT.Application.Administration.csproj", "{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Quote", "EUT.Application.Quote\EUT.Application.Quote.csproj", "{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.EmailEngine", "EUT.Repository.EmailEngine\EUT.Repository.EmailEngine.csproj", "{886E2253-0554-4830-9D12-337D38EB4482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.FieldOrder", "EUT.Repository.FieldOrder\EUT.Repository.FieldOrder.csproj", "{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.Data", "EUT.Repository.Data\EUT.Repository.Data.csproj", "{FC76EC41-3456-4455-8FB7-858F7E018BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.Inventory", "EUT.Repository.Inventory\EUT.Repository.Inventory.csproj", "{B675F721-0C6F-4DAF-8745-2754D99F0681}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Inventory", "EUT.Domain.Inventory\EUT.Domain.Inventory.csproj", "{60CFEE1B-44FC-44AF-9A12-AB022F690056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.ServicesClient.FieldOrderManagement", "EUT.ServicesClient.FieldOrderManagement\EUT.ServicesClient.FieldOrderManagement.csproj", "{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Data", "EUT.Application.Data\EUT.Application.Data.csproj", "{31085C7A-FE2C-4C1B-B63C-0111B1286AF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.FieldOrderWeb", "EUT.Application.FieldOrderWeb\EUT.Application.FieldOrderWeb.csproj", "{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.FieldOrderWeb", "EUT.Repository.FieldOrderWeb\EUT.Repository.FieldOrderWeb.csproj", "{1343A79D-0035-47A7-96E8-42208EA03C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.FieldOrderWeb", "EUT.Domain.FieldOrderWeb\EUT.Domain.FieldOrderWeb.csproj", "{67770688-5E8D-40CA-B31A-7601AA64AB99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.Administration", "EUT.Repository.Administration\EUT.Repository.Administration.csproj", "{9B196558-8601-4EF9-B01D-BEE0B6888C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.ItemMaster", "EUT.Application.ItemMaster\EUT.Application.ItemMaster.csproj", "{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.ItemMaster", "EUT.Repository.ItemMaster\EUT.Repository.ItemMaster.csproj", "{4DB81936-B416-4355-BDB3-07CDE33F8D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.Security", "EUT.Application.Security\EUT.Application.Security.csproj", "{32A2D500-1060-4ED9-A1B8-93FCD269487C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.Security", "EUT.Repository.Security\EUT.Repository.Security.csproj", "{DA984074-3487-4F37-9DF6-1A58E08B3957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.Security", "EUT.Domain.Security\EUT.Domain.Security.csproj", "{1A231914-5234-48B4-9B89-CB44DA86F5C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.RentalAssignmentWeb", "EUT.Application.RentalAssignmentWeb\EUT.Application.RentalAssignmentWeb.csproj", "{B3E21CDC-5056-40B6-A8F5-3F240252350C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.RentalAssignmentWeb", "EUT.Repository.RentalAssignmentWeb\EUT.Repository.RentalAssignmentWeb.csproj", "{24C60315-1CEC-4ACE-9606-56168F920F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Domain.RentalAssignment", "EUT.Domain.RentalAssignment\EUT.Domain.RentalAssignment.csproj", "{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Application.RentalAssignment", "EUT.Application.RentalAssignment\EUT.Application.RentalAssignment.csproj", "{3487EA0D-3343-4258-A334-D3B04A567476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Repository.RentalAssignemnt", "EUT.Repository.RentalAssignemnt\EUT.Repository.RentalAssignemnt.csproj", "{59B4B374-169D-419D-8FD1-6E4AACAD4DF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomerPortal", "CustomerPortal", "{99A1B2C3-5391-4AFF-8D2C-F20A5C168E57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaturalCalm.API", "..\..\Customer Portal\EUTSOL_VER1_APIS\NaturalCalm.API\NaturalCalm.API.csproj", "{F0F5315A-A764-4C50-B636-C903A7DF9027}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EUT.Reports", "EUT.Reports", "{6D97E21A-C7B6-4F46-ACB2-8FC28B7D0306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EUT.Reports.PDF", "EUT.Reports.PDF\EUT.Reports.PDF.csproj", "{922A0C9B-A78A-4231-B5F0-33123755D44E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ICSShippingGateway", "ICSShippingGateway", "{79F1FD52-F0B2-4C6D-9DF8-C8D8BB70BC87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSShippingGatewayIntegration", "ICSShippingGatewayIntegration\ICSShippingGatewayIntegration.csproj", "{D4AC7284-1A31-4DCC-8239-082D6BA2154C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A85E49B-07DA-466B-9FA3-6FDCBB07019A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A85E49B-07DA-466B-9FA3-6FDCBB07019A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A85E49B-07DA-466B-9FA3-6FDCBB07019A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A85E49B-07DA-466B-9FA3-6FDCBB07019A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3193FF28-674F-49E4-9FD6-FADFE757F0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3193FF28-674F-49E4-9FD6-FADFE757F0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3193FF28-674F-49E4-9FD6-FADFE757F0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3193FF28-674F-49E4-9FD6-FADFE757F0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38B9D19-47DD-48F1-944C-A27A0900886C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38B9D19-47DD-48F1-944C-A27A0900886C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38B9D19-47DD-48F1-944C-A27A0900886C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38B9D19-47DD-48F1-944C-A27A0900886C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13AFE6B5-FC64-4071-941A-E94D16235D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13AFE6B5-FC64-4071-941A-E94D16235D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13AFE6B5-FC64-4071-941A-E94D16235D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13AFE6B5-FC64-4071-941A-E94D16235D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FCFD04A-371D-414F-B849-2AE2BA403FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCFD04A-371D-414F-B849-2AE2BA403FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCFD04A-371D-414F-B849-2AE2BA403FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCFD04A-371D-414F-B849-2AE2BA403FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6377FDEE-F66C-4488-97B7-2EDD9ED076E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6377FDEE-F66C-4488-97B7-2EDD9ED076E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6377FDEE-F66C-4488-97B7-2EDD9ED076E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6377FDEE-F66C-4488-97B7-2EDD9ED076E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162A1CB9-6C04-4947-9AD6-8F51C3A928E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162A1CB9-6C04-4947-9AD6-8F51C3A928E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162A1CB9-6C04-4947-9AD6-8F51C3A928E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162A1CB9-6C04-4947-9AD6-8F51C3A928E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{886E2253-0554-4830-9D12-337D38EB4482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886E2253-0554-4830-9D12-337D38EB4482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886E2253-0554-4830-9D12-337D38EB4482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886E2253-0554-4830-9D12-337D38EB4482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC76EC41-3456-4455-8FB7-858F7E018BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC76EC41-3456-4455-8FB7-858F7E018BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC76EC41-3456-4455-8FB7-858F7E018BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC76EC41-3456-4455-8FB7-858F7E018BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B675F721-0C6F-4DAF-8745-2754D99F0681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B675F721-0C6F-4DAF-8745-2754D99F0681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B675F721-0C6F-4DAF-8745-2754D99F0681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B675F721-0C6F-4DAF-8745-2754D99F0681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60CFEE1B-44FC-44AF-9A12-AB022F690056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60CFEE1B-44FC-44AF-9A12-AB022F690056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60CFEE1B-44FC-44AF-9A12-AB022F690056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60CFEE1B-44FC-44AF-9A12-AB022F690056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31085C7A-FE2C-4C1B-B63C-0111B1286AF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31085C7A-FE2C-4C1B-B63C-0111B1286AF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31085C7A-FE2C-4C1B-B63C-0111B1286AF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31085C7A-FE2C-4C1B-B63C-0111B1286AF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1343A79D-0035-47A7-96E8-42208EA03C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1343A79D-0035-47A7-96E8-42208EA03C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1343A79D-0035-47A7-96E8-42208EA03C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1343A79D-0035-47A7-96E8-42208EA03C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67770688-5E8D-40CA-B31A-7601AA64AB99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67770688-5E8D-40CA-B31A-7601AA64AB99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67770688-5E8D-40CA-B31A-7601AA64AB99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67770688-5E8D-40CA-B31A-7601AA64AB99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DB81936-B416-4355-BDB3-07CDE33F8D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DB81936-B416-4355-BDB3-07CDE33F8D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DB81936-B416-4355-BDB3-07CDE33F8D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DB81936-B416-4355-BDB3-07CDE33F8D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A2D500-1060-4ED9-A1B8-93FCD269487C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A2D500-1060-4ED9-A1B8-93FCD269487C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A2D500-1060-4ED9-A1B8-93FCD269487C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A2D500-1060-4ED9-A1B8-93FCD269487C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA984074-3487-4F37-9DF6-1A58E08B3957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA984074-3487-4F37-9DF6-1A58E08B3957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA984074-3487-4F37-9DF6-1A58E08B3957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA984074-3487-4F37-9DF6-1A58E08B3957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A231914-5234-48B4-9B89-CB44DA86F5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A231914-5234-48B4-9B89-CB44DA86F5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A231914-5234-48B4-9B89-CB44DA86F5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A231914-5234-48B4-9B89-CB44DA86F5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E21CDC-5056-40B6-A8F5-3F240252350C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E21CDC-5056-40B6-A8F5-3F240252350C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E21CDC-5056-40B6-A8F5-3F240252350C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E21CDC-5056-40B6-A8F5-3F240252350C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C60315-1CEC-4ACE-9606-56168F920F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C60315-1CEC-4ACE-9606-56168F920F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C60315-1CEC-4ACE-9606-56168F920F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C60315-1CEC-4ACE-9606-56168F920F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3487EA0D-3343-4258-A334-D3B04A567476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3487EA0D-3343-4258-A334-D3B04A567476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3487EA0D-3343-4258-A334-D3B04A567476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3487EA0D-3343-4258-A334-D3B04A567476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B4B374-169D-419D-8FD1-6E4AACAD4DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B4B374-169D-419D-8FD1-6E4AACAD4DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B4B374-169D-419D-8FD1-6E4AACAD4DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B4B374-169D-419D-8FD1-6E4AACAD4DF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F5315A-A764-4C50-B636-C903A7DF9027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F5315A-A764-4C50-B636-C903A7DF9027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F5315A-A764-4C50-B636-C903A7DF9027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F5315A-A764-4C50-B636-C903A7DF9027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922A0C9B-A78A-4231-B5F0-33123755D44E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922A0C9B-A78A-4231-B5F0-33123755D44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922A0C9B-A78A-4231-B5F0-33123755D44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922A0C9B-A78A-4231-B5F0-33123755D44E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4AC7284-1A31-4DCC-8239-082D6BA2154C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AC7284-1A31-4DCC-8239-082D6BA2154C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AC7284-1A31-4DCC-8239-082D6BA2154C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AC7284-1A31-4DCC-8239-082D6BA2154C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E5C9DD2-B5C1-4475-BECD-1F38E4C79C20} = {F3996F4F-FDA8-4B22-A9AF-AED9D3EC8A1F}
+		{CDCDED8A-2EB1-424D-A4C5-F9441C792A1E} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{8A85E49B-07DA-466B-9FA3-6FDCBB07019A} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{3447BFD5-BD46-4AE8-AB6C-8B8E2B74474F} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{3193FF28-674F-49E4-9FD6-FADFE757F0E4} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{BCD4BA39-7B6D-439C-8BA5-56BF80E5FAE7} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{0443356A-DDC2-4CFF-B5D5-0957057280FF} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{B38B9D19-47DD-48F1-944C-A27A0900886C} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{13AFE6B5-FC64-4071-941A-E94D16235D3C} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{1FCFD04A-371D-414F-B849-2AE2BA403FFD} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{6377FDEE-F66C-4488-97B7-2EDD9ED076E1} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{B6EA9A1A-2750-4259-9EE7-404E3D06AC83} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{EDDB3850-67D9-4CB3-9BB9-E0E622BB277B} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{4CE4CA4B-4856-4097-8467-646EACFB5B97} = {B2572D01-EC08-4A40-AE8C-0CBC1E12207B}
+		{C3F7B29C-EAB6-4C76-A50B-DBABC8D153F7} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{162A1CB9-6C04-4947-9AD6-8F51C3A928E7} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{9E9DA561-AE3D-42FC-9E9D-52F350E4C2CA} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{C5A9E889-CA11-4C8C-9C3D-95F0AF7B6B1D} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{886E2253-0554-4830-9D12-337D38EB4482} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{E8059F7E-37B5-4C04-84E3-1D2C70A4E93D} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{FC76EC41-3456-4455-8FB7-858F7E018BFD} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{B675F721-0C6F-4DAF-8745-2754D99F0681} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{60CFEE1B-44FC-44AF-9A12-AB022F690056} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{439F195B-C3BD-415A-AD3C-A7FCCA38A9C7} = {88ED103C-00DB-41D5-A43B-13B6150861AE}
+		{31085C7A-FE2C-4C1B-B63C-0111B1286AF3} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{EA2066F6-8DA3-4F57-9280-6B4EB232BAE1} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{1343A79D-0035-47A7-96E8-42208EA03C56} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{67770688-5E8D-40CA-B31A-7601AA64AB99} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{9B196558-8601-4EF9-B01D-BEE0B6888C62} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{CBE3C7EC-8CCF-48A1-9255-99F0E490F54F} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{4DB81936-B416-4355-BDB3-07CDE33F8D2D} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{32A2D500-1060-4ED9-A1B8-93FCD269487C} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{DA984074-3487-4F37-9DF6-1A58E08B3957} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{1A231914-5234-48B4-9B89-CB44DA86F5C9} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{B3E21CDC-5056-40B6-A8F5-3F240252350C} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{24C60315-1CEC-4ACE-9606-56168F920F87} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{7AEB9FAF-458D-4A37-8B3D-E2F85472F37C} = {DD941998-758E-45D4-BCC6-D4A84219C6F3}
+		{3487EA0D-3343-4258-A334-D3B04A567476} = {96D6CC66-005B-40E5-8D31-DCE93BFBD49C}
+		{59B4B374-169D-419D-8FD1-6E4AACAD4DF1} = {D5A4D0E9-AE1B-4647-82B7-16891FAFBEA6}
+		{F0F5315A-A764-4C50-B636-C903A7DF9027} = {99A1B2C3-5391-4AFF-8D2C-F20A5C168E57}
+		{922A0C9B-A78A-4231-B5F0-33123755D44E} = {6D97E21A-C7B6-4F46-ACB2-8FC28B7D0306}
+		{D4AC7284-1A31-4DCC-8239-082D6BA2154C} = {79F1FD52-F0B2-4C6D-9DF8-C8D8BB70BC87}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28C62598-3061-4B8D-84F9-866B69A3E753}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 39
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.10.20.201:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = EUT.Application.Common\\EUT.Application.Common.csproj
+		SccProjectTopLevelParentUniqueName0 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName0 = EUT.Application.Common
+		SccAuxPath0 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath0 = EUT.Application.Common
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = EUT.Domain.Base\\EUT.Domain.Base.csproj
+		SccProjectTopLevelParentUniqueName1 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName1 = EUT.Domain.Base
+		SccAuxPath1 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath1 = EUT.Domain.Base
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = EUT.Domain.Administration\\EUT.Domain.Administration.csproj
+		SccProjectTopLevelParentUniqueName2 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName2 = EUT.Domain.Administration
+		SccAuxPath2 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath2 = EUT.Domain.Administration
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = EUT.Domain.Common\\EUT.Domain.Common.csproj
+		SccProjectTopLevelParentUniqueName3 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName3 = EUT.Domain.Common
+		SccAuxPath3 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath3 = EUT.Domain.Common
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = EUT.Domain.Facility\\EUT.Domain.Facility.csproj
+		SccProjectTopLevelParentUniqueName4 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName4 = EUT.Domain.Facility
+		SccAuxPath4 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath4 = EUT.Domain.Facility
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = EUT.Domain.Permission\\EUT.Domain.Permission.csproj
+		SccProjectTopLevelParentUniqueName5 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName5 = EUT.Domain.Permission
+		SccAuxPath5 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath5 = EUT.Domain.Permission
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = EUT.Domain.Quote\\EUT.Domain.Quote.csproj
+		SccProjectTopLevelParentUniqueName6 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName6 = EUT.Domain.Quote
+		SccAuxPath6 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath6 = EUT.Domain.Quote
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = EUT.Domain.RepairOrder\\EUT.Domain.RepairOrder.csproj
+		SccProjectTopLevelParentUniqueName7 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName7 = EUT.Domain.RepairOrder
+		SccAuxPath7 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath7 = EUT.Domain.RepairOrder
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName8 = EUT.Domain.UserManagement\\EUT.Domain.UserManagement.csproj
+		SccProjectTopLevelParentUniqueName8 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName8 = EUT.Domain.UserManagement
+		SccAuxPath8 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath8 = EUT.Domain.UserManagement
+		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName9 = EUT.Domain.RTMI\\EUT.Domain.RTMI.csproj
+		SccProjectTopLevelParentUniqueName9 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName9 = EUT.Domain.RTMI
+		SccAuxPath9 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath9 = EUT.Domain.RTMI
+		SccProvider9 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName10 = EUT.Repository.UserManagement\\EUT.Repository.UserManagement.csproj
+		SccProjectTopLevelParentUniqueName10 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName10 = EUT.Repository.UserManagement
+		SccAuxPath10 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath10 = EUT.Repository.UserManagement
+		SccProvider10 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName11 = EUT.Repository.Base\\EUT.Repository.Base.csproj
+		SccProjectTopLevelParentUniqueName11 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName11 = EUT.Repository.Base
+		SccAuxPath11 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath11 = EUT.Repository.Base
+		SccProvider11 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName12 = EUT.Shared\\EUT.Shared.csproj
+		SccProjectTopLevelParentUniqueName12 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName12 = EUT.Shared
+		SccAuxPath12 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath12 = EUT.Shared
+		SccProvider12 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName13 = EUT.Application.FieldOrder\\EUT.Application.FieldOrder.csproj
+		SccProjectTopLevelParentUniqueName13 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName13 = EUT.Application.FieldOrder
+		SccAuxPath13 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath13 = EUT.Application.FieldOrder
+		SccProvider13 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName14 = EUT.Application.Inventory\\EUT.Application.Inventory.csproj
+		SccProjectTopLevelParentUniqueName14 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName14 = EUT.Application.Inventory
+		SccAuxPath14 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath14 = EUT.Application.Inventory
+		SccProvider14 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName15 = EUT.Application.Administration\\EUT.Application.Administration.csproj
+		SccProjectTopLevelParentUniqueName15 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName15 = EUT.Application.Administration
+		SccAuxPath15 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath15 = EUT.Application.Administration
+		SccProvider15 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName16 = EUT.Application.Quote\\EUT.Application.Quote.csproj
+		SccProjectTopLevelParentUniqueName16 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName16 = EUT.Application.Quote
+		SccAuxPath16 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath16 = EUT.Application.Quote
+		SccProvider16 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName17 = EUT.Repository.EmailEngine\\EUT.Repository.EmailEngine.csproj
+		SccProjectTopLevelParentUniqueName17 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName17 = EUT.Repository.EmailEngine
+		SccAuxPath17 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath17 = EUT.Repository.EmailEngine
+		SccProvider17 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName18 = EUT.Repository.FieldOrder\\EUT.Repository.FieldOrder.csproj
+		SccProjectTopLevelParentUniqueName18 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName18 = EUT.Repository.FieldOrder
+		SccAuxPath18 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath18 = EUT.Repository.FieldOrder
+		SccProvider18 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName19 = EUT.Repository.Data\\EUT.Repository.Data.csproj
+		SccProjectTopLevelParentUniqueName19 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName19 = EUT.Repository.Data
+		SccAuxPath19 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath19 = EUT.Repository.Data
+		SccProvider19 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName20 = EUT.Repository.Inventory\\EUT.Repository.Inventory.csproj
+		SccProjectTopLevelParentUniqueName20 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName20 = EUT.Repository.Inventory
+		SccAuxPath20 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath20 = EUT.Repository.Inventory
+		SccProvider20 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName21 = EUT.Domain.Inventory\\EUT.Domain.Inventory.csproj
+		SccProjectTopLevelParentUniqueName21 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName21 = EUT.Domain.Inventory
+		SccAuxPath21 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath21 = EUT.Domain.Inventory
+		SccProvider21 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName22 = EUT.ServicesClient.FieldOrderManagement\\EUT.ServicesClient.FieldOrderManagement.csproj
+		SccProjectTopLevelParentUniqueName22 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName22 = EUT.ServicesClient.FieldOrderManagement
+		SccAuxPath22 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath22 = EUT.ServicesClient.FieldOrderManagement
+		SccProvider22 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName23 = EUT.Application.Data\\EUT.Application.Data.csproj
+		SccProjectTopLevelParentUniqueName23 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName23 = EUT.Application.Data
+		SccAuxPath23 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath23 = EUT.Application.Data
+		SccProvider23 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName24 = EUT.Application.FieldOrderWeb\\EUT.Application.FieldOrderWeb.csproj
+		SccProjectTopLevelParentUniqueName24 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName24 = EUT.Application.FieldOrderWeb
+		SccAuxPath24 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath24 = EUT.Application.FieldOrderWeb
+		SccProvider24 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName25 = EUT.Repository.FieldOrderWeb\\EUT.Repository.FieldOrderWeb.csproj
+		SccProjectTopLevelParentUniqueName25 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName25 = EUT.Repository.FieldOrderWeb
+		SccAuxPath25 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath25 = EUT.Repository.FieldOrderWeb
+		SccProvider25 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName26 = EUT.Domain.FieldOrderWeb\\EUT.Domain.FieldOrderWeb.csproj
+		SccProjectTopLevelParentUniqueName26 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName26 = EUT.Domain.FieldOrderWeb
+		SccAuxPath26 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath26 = EUT.Domain.FieldOrderWeb
+		SccProvider26 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName27 = EUT.Repository.Administration\\EUT.Repository.Administration.csproj
+		SccProjectTopLevelParentUniqueName27 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName27 = EUT.Repository.Administration
+		SccAuxPath27 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath27 = EUT.Repository.Administration
+		SccProvider27 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName28 = EUT.Application.ItemMaster\\EUT.Application.ItemMaster.csproj
+		SccProjectTopLevelParentUniqueName28 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName28 = EUT.Application.ItemMaster
+		SccAuxPath28 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath28 = EUT.Application.ItemMaster
+		SccProvider28 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName29 = EUT.Repository.ItemMaster\\EUT.Repository.ItemMaster.csproj
+		SccProjectTopLevelParentUniqueName29 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName29 = EUT.Repository.ItemMaster
+		SccAuxPath29 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath29 = EUT.Repository.ItemMaster
+		SccProvider29 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName30 = EUT.Application.Security\\EUT.Application.Security.csproj
+		SccProjectTopLevelParentUniqueName30 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName30 = EUT.Application.Security
+		SccAuxPath30 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath30 = EUT.Application.Security
+		SccProvider30 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName31 = EUT.Repository.Security\\EUT.Repository.Security.csproj
+		SccProjectTopLevelParentUniqueName31 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName31 = EUT.Repository.Security
+		SccAuxPath31 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath31 = EUT.Repository.Security
+		SccProvider31 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName32 = EUT.Domain.Security\\EUT.Domain.Security.csproj
+		SccProjectTopLevelParentUniqueName32 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName32 = EUT.Domain.Security
+		SccAuxPath32 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath32 = EUT.Domain.Security
+		SccProvider32 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName33 = EUT.Application.RentalAssignmentWeb\\EUT.Application.RentalAssignmentWeb.csproj
+		SccProjectTopLevelParentUniqueName33 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName33 = EUT.Application.RentalAssignmentWeb
+		SccAuxPath33 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath33 = EUT.Application.RentalAssignmentWeb
+		SccProvider33 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName34 = EUT.Repository.RentalAssignmentWeb\\EUT.Repository.RentalAssignmentWeb.csproj
+		SccProjectTopLevelParentUniqueName34 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName34 = EUT.Repository.RentalAssignmentWeb
+		SccAuxPath34 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath34 = EUT.Repository.RentalAssignmentWeb
+		SccProvider34 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName35 = EUT.Domain.RentalAssignment\\EUT.Domain.RentalAssignment.csproj
+		SccProjectTopLevelParentUniqueName35 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName35 = EUT.Domain.RentalAssignment
+		SccAuxPath35 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath35 = EUT.Domain.RentalAssignment
+		SccProvider35 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName36 = EUT.Application.RentalAssignment\\EUT.Application.RentalAssignment.csproj
+		SccProjectTopLevelParentUniqueName36 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName36 = EUT.Application.RentalAssignment
+		SccAuxPath36 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath36 = EUT.Application.RentalAssignment
+		SccProvider36 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName37 = EUT.Repository.RentalAssignemnt\\EUT.Repository.RentalAssignemnt.csproj
+		SccProjectTopLevelParentUniqueName37 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName37 = EUT.Repository.RentalAssignemnt
+		SccAuxPath37 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath37 = EUT.Repository.RentalAssignemnt
+		SccProvider37 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName38 = EUT.Services.API\\EUT.Services.API.csproj
+		SccProjectTopLevelParentUniqueName38 = EUT\u0020SQL\u0020Server.sln
+		SccProjectName38 = EUT.Services.API
+		SccAuxPath38 = http://10.10.20.201:8080/tfs/defaultcollection
+		SccLocalPath38 = EUT.Services.API
+		SccProvider38 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal
